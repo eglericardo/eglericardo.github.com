@@ -1,0 +1,36 @@
+@import url('https://cdn.jsdelivr.net/npm/emojione@3.1.2/extras/css/emojione-awesome.css');
+
+.e1a-xlg {
+  width: 256px;
+  height: 256px;
+  margin: -1.6ex 0.8em 0 -0.8em;
+  background-size: 8em 8em;
+}
+
+.e1a-sm-no-spaces {
+  width: 1em;
+  height: 1em;
+  margin: -0.2ex 0.05em 0 0.1em;
+  background-size: 1em 1em;
+}
+
+.e1a-med-no-spaces {
+  width: 2em;
+  height: 2em;
+  margin: -0.4ex 0.1em 0 0.2em;
+  background-size: 2em 2em;
+}
+
+.e1a-lg-no-spaces {
+  width: 4em;
+  height: 4em;
+  margin: -0.8ex 0.2em 0 0.4em;
+  background-size: 4em 4em;
+}
+
+.e1a-xlg-no-spaces {
+  width: 8em;
+  height: 8em;
+  margin: -1.6ex 0.8em 0 -0.8em;
+  background-size: 8em 8em;
+}
