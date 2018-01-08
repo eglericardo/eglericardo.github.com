@@ -327,6 +327,20 @@ var x = setInterval(function() {
 <script src="http://eglericardo.love/assets/js/main.js"></script>
 
 
+<!-- Bug-fix for the problem of animation. -->
+<script>
+var $window = $(window),
+    $body = $('body');
+
+$window.on('load', function() {
+  window.setInterval(function() {
+    if($body.removeClass('is-loading')){
+      $body.removeClass('is-loading');
+    }
+  }, 150);
+});
+</script>
+
   </body>
 
 </html>
