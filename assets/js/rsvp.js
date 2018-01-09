@@ -26,7 +26,7 @@ $("input[name='partner']")
 });
 
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzzd1U9PiI74oBN8MC-_FyRqg7BaGMTsDRqeXlpU8y308EYvQo/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwtvYt0_RQCCoKoD3JVlipD-OEevqWwRkMR8_jRreg/exec';
 const form = document.forms['rsvp']
 
 form.addEventListener('submit', e => {
