@@ -26,30 +26,12 @@ $("input[name='partner']")
 });
 
 
-$('#submit-form').on('click', function(e) {
-  var $form = $('form#rsvp');
-  var google_forms = 'https://docs.google.com/forms/d/e/1FAIpQLSdt1x-dkJzq3qDA-hYSBtjgxrso4_P_8hY74Mj0bQdnwxxiOg/formResponse';
-  var url = google_forms;
-  var fields = ['name', 'attendance', 'email', 'food', 'partner', 'namePartner', 'foodPartner', 'transport', 'comments'];
-  var google_fields = ['entry.2134669730', 'entry.787446130', 'entry.1027082432', 'entry.625021019', 'entry.1591295703', 'entry.1174150498', 'entry.1276663904', 'entry.247851954', 'entry.815667730'];
-  var formJson = $form.serializeObject();
-  var newJson = {};
-  for (var i = 0; i < google_fields.length; i++) {
-    newJson[google_fields[i]] = formJson[fields[i]]
-  }
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzzd1U9PiI74oBN8MC-_FyRqg7BaGMTsDRqeXlpU8y308EYvQo/exec';
+const form = document.forms['rsvp']
 
-  var jqxhr = $.ajax(
-    { 
-      url: url
-    , method: "POST"
-    , dataType: "json"
-    , data: newJson
-    })
-    .done(function(data) {
-      console.log("Success! Data: " + data.statusText);
-      //$(location).attr('href',redirectUrl);
-    })
-    .fail(function(data) {
-      console.warn("Error! Data: " + data.statusText);
-    });
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message));
 });
