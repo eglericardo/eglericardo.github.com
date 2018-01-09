@@ -28,9 +28,8 @@ $("input[name='partner']")
 
 $('#submit-form').on('click', function(e) {
   var $form = $('form#rsvp');
-  var cors_proxy = 'https://cors-anywhere.herokuapp.com/';
   var google_forms = 'https://docs.google.com/forms/d/e/1FAIpQLSdt1x-dkJzq3qDA-hYSBtjgxrso4_P_8hY74Mj0bQdnwxxiOg/formResponse';
-  var url = cors_proxy + google_forms;
+  var url = google_forms;
   var fields = ['name', 'attendance', 'email', 'food', 'partner', 'namePartner', 'foodPartner', 'transport', 'comments'];
   var google_fields = ['entry.2134669730', 'entry.787446130', 'entry.1027082432', 'entry.625021019', 'entry.1591295703', 'entry.1174150498', 'entry.1276663904', 'entry.247851954', 'entry.815667730'];
   var formJson = $form.serializeObject();
@@ -43,10 +42,8 @@ $('#submit-form').on('click', function(e) {
     { 
       url: url
     , method: "POST"
-    , dataType: "json"
+    , dataType: "jsonp"
     , data: newJson
-    , xhrFields: { withCredentials: true }
-    , crossDomain: true
     })
     .done(function(data) {
       console.log("Success! Data: " + data.statusText);
