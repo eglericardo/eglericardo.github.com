@@ -41,7 +41,7 @@ $('#submit-form').on('click', function(e) {
   var jqxhr = $.ajax(
     { 
       url: url
-    , method: "POST"
+    , method: "GET"
     , dataType: "jsonp"
     , data: newJson
     })
