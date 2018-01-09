@@ -45,9 +45,5 @@ $('#submit-form').on('click', function(e) {
       console.log("Success! Data: " + data.statusText);
       alert("Success! Data: " + data.statusText);
       //$(location).attr('href',redirectUrl);
-    })
-    .fail(function(data) {
-      console.warn("Error! Data: " + data.statusText);
-      alert("Error! Data: " + data.statusText);
     });
 });
