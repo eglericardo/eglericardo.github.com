@@ -43,10 +43,8 @@ $('#submit-form').on('click', function(e) {
     { 
       url: url
     , method: "POST"
-    , dataType: "json"
+    , dataType: "jsonp"
     , data: newJson
-    , xhrFields: { withCredentials: true }
-    , crossDomain: true
     })
     .done(function(data) {
       console.log("Success! Data: " + data.statusText);
