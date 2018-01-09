@@ -42,7 +42,7 @@ $('#submit-form').on('click', function(e) {
     { 
       url: url
     , method: "GET"
-    , dataType: "jsonp"
+    , dataType: "json"
     , data: newJson
     })
     .done(function(data) {
