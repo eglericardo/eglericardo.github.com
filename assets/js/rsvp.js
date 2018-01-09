@@ -43,7 +43,7 @@ window.addEventListener("load", function () {
     });
 
     // Set up our request
-    XHR.open("POST", "https://script.google.com/macros/s/AKfycbzzd1U9PiI74oBN8MC-_FyRqg7BaGMTsDRqeXlpU8y308EYvQo/exec", false);
+    XHR.open("POST", "https://script.google.com/macros/s/AKfycbzzd1U9PiI74oBN8MC-_FyRqg7BaGMTsDRqeXlpU8y308EYvQo/exec", true);
 
     // The data sent is what the user provided in the form
     XHR.send(FD);
