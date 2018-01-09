@@ -34,7 +34,7 @@ $('#submit-form').on('click', function(e) {
   var fields = ['name', 'attendance', 'email', 'food', 'partner', 'namePartner', 'foodPartner', 'transport', 'comments'];
   var google_fields = ['entry.2134669730', 'entry.787446130', 'entry.1027082432', 'entry.625021019', 'entry.1591295703', 'entry.1174150498', 'entry.1276663904', 'entry.247851954', 'entry.815667730'];
   var formJson = $form.serializeObject();
-  var newJson = {}
+  var newJson = {};
   for (var i = 0; i < google_fields.length; i++) {
     newJson[google_fields[i]] = formJson[fields[i]]
   }
@@ -49,13 +49,10 @@ $('#submit-form').on('click', function(e) {
     , crossDomain: true
     })
     .done(function(data) {
-    console.log("Success! Data: " + data.statusText);
-    //$(location).attr('href',redirectUrl);
+      console.log("Success! Data: " + data.statusText);
+      //$(location).attr('href',redirectUrl);
     })
     .fail(function(data) {
       console.warn("Error! Data: " + data.statusText);
-    })
-    .complete(function(data) {
-      window.location.replace(window.location.origin + '/#one')
     });
 });
