@@ -42,11 +42,11 @@ window.addEventListener("load", function () {
       alert('Oups! Something goes wrong.');
     });
 
-    // Set up header
-    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
     // Set up our request
     XHR.open("POST", "https://script.google.com/macros/s/AKfycbzzd1U9PiI74oBN8MC-_FyRqg7BaGMTsDRqeXlpU8y308EYvQo/exec");
+
+    // Set up header
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
     // The data sent is what the user provided in the form
     XHR.send(FD);
